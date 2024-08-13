@@ -1,0 +1,109 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+  transition: background 0.5s ease-in-out;
+}
+
+.clock-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.clock-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.greeting {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.time-display {
+  font-size: 3em;
+  color: #444;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.timezone-select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f06;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #e05;
+}
+
+.countdown {
+  font-size: 1.5em;
+  color: #666;
+  margin-top: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.time-fact {
+  font-size: 1em;
+  color: #888;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .clock-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .time-display {
+    font-size: 2em;
+  }
+
+  .greeting {
+    font-size: 1.2em;
+  }
+}
